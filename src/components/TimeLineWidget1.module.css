@@ -28,7 +28,8 @@
   display: flex;
 }
 .about_timeline_heading_wrapper {
-  flex-flow: column;
+  /* flex-flow: column; */
+  flex-flow: column-reverse;
   display: flex;
 }
 .about_timeline_heading {
@@ -59,6 +60,11 @@
   place-content: center flex-start;
   align-items: center;
   display: flex;
+  transform: translateX(-650%);
+}
+.firstProgessIndicator:first-child{
+  transform: translateX(0%);
+
 }
 .about_progress_circle_wrapper {
   border-radius: 100%;
@@ -182,6 +188,9 @@
 .about_timeline_heading_wrapper.is_section_2 {
   transform: translate(-50%);
 }
+.is_section_1{
+  transform: translate(-20%);
+}
 .about_horizontal_image_wrap_big {
   max-width: 20.125rem;
 }
@@ -285,6 +294,9 @@
   .about_timeline_heading_wrapper.is_section_2 {
     transform: none;
   }
+  .is_section_1{
+      transform: none;
+}
   .about_horizontal_image_wrap_big {
     flex: 1;
   }
@@ -323,6 +335,10 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
+  .is_section_1{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
   .about_progress_wrapper {
     display: none;
   }

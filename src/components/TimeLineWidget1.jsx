@@ -175,18 +175,18 @@ const TimeLineWidget1 = () => {
           >
             <div className={styles.about_horizontal_container}>
               <div className={styles.about_horizontal_slide}>
-                  <div className={styles.about_horizontal_progress}>
+                  <div className={`${styles.about_horizontal_progress} ${styles.firstProgessIndicator}`}>
                     <div className={styles.about_progress_circle_wrapper}>
                       <div className={styles.about_progress_circle} />
                     </div>
                   </div>
-                <div className={styles.about_timeline_heading_wrapper}>
+                <div className={styles.about_horizontal_info}>
+                <div className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_1}`}>
                   <h2 className={styles.about_timeline_heading}>
                     Accommodation
                   </h2>
                   {/* <div className={styles.yearago}>{item.subtitle}</div> */}
                 </div>
-                <div className={styles.about_horizontal_info}>
                   <div className={styles.u_hide_tablet}></div>
                   <div className={styles.about_horizontal_text}>
                     <h3
