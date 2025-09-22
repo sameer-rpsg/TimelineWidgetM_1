@@ -256,6 +256,8 @@
     /* display: none; */
     position: absolute;
     left: -41px;
+  transform: translateX(0%);
+
   }
   .about_horizontal_text {
     width: 100%;
