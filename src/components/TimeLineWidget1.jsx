@@ -30,8 +30,7 @@ const TimeLineWidget1 = () => {
       subtitle: "YEARS AGO",
       title: "Ancient Beginnings",
       highlights: [
-        "Lacquerware was first developed in Vietnam as a practical craft for creating durable, waterproof objects like bowls, trays, and furniture.",
-        "The use of lacquer resin from the ”son ta” tree (Toxicodendron vernicifluum) became a hallmark of Vietnamese craftsmanship.",
+        "Travel, at its best, is about being present, and being prepared is what makes that possible, almost seamlessly. There’s a quiet relief that comes with knowing your luggage won’t demand your attention once you land. When the practical details are taken care of, you’re free to notice the small things… the sweet hamper that your friends kept for you to make you feel at home in a new city, the beautiful decor which will make way to your ‘gram, or how you and your partner wish to extend the trip once the celebrations are over.",
       ],
       images: [
         {
@@ -49,8 +48,7 @@ const TimeLineWidget1 = () => {
       subtitle: "YEARS AGO",
       title: "Ancient Beginnings",
       highlights: [
-        "Lacquerware was first developed in Vietnam as a practical craft for creating durable, waterproof objects like bowls, trays, and furniture.",
-        "The use of lacquer resin from the ”son ta” tree (Toxicodendron vernicifluum) became a hallmark of Vietnamese craftsmanship.",
+        "As wedding festivities unfold, days stretch longer than expected. Between mehendi, sangeet, and many late-night celebrations and outfit changes, flexibility becomes essential. This is where the Alpha Bravo Logistics Flap Lid Backpack feels structured yet unfussy. This one can carry essentials without weighing you down. Pair this with the Alabama Crossbody bag, which is almost invisible as you move through celebrations. It will keep your hands free and shoulders relaxed, allowing you to stay focused on the moments that matter.",
       ],
       images: [
         {
@@ -68,8 +66,25 @@ const TimeLineWidget1 = () => {
       subtitle: "YEARS AGO",
       title: "Ancient Beginnings",
       highlights: [
-        "Lacquerware was first developed in Vietnam as a practical craft for creating durable, waterproof objects like bowls, trays, and furniture.",
-        "The use of lacquer resin from the ”son ta” tree (Toxicodendron vernicifluum) became a hallmark of Vietnamese craftsmanship.",
+        "In between ceremonies and commitments, couples often find themselves wandering. And when your belongings are organised, the day feels managed effortlessly. This lets you spend a little more time with your girls as they get their hands adorned with henna, or ensuring the bride-to-be is duly hydrated as you help her sip her favourite drinks. Here you’re clicking photographs that you’ll cherish many years down the line or recall all your favourite memories from the celebrations... These are the quieter moments which reveal themselves slowly. Here time stretches, without weighing you down.",
+      ],
+      images: [
+        {
+          src: "https://cdn.prod.website-files.com/6734928e2af1829d3c568460/68119712c8c4c74ad0ef01b8_p1-1.avif",
+          alt: "”son ta” tree - Toxicodendron vernicifluum (Son Ta Phu Tho - Rhus Succedanea paint in Phu Tho)",
+          caption:
+            "”son ta” tree - Toxicodendron vernicifluum (Son Ta Phu Tho - Rhus Succedanea paint in Phu Tho)",
+        },
+      ],
+    },
+  ];
+  const timelineData5 = [
+    {
+      yearLabel: "2000+",
+      subtitle: "YEARS AGO",
+      title: "Ancient Beginnings",
+      highlights: [
+        "With a heart filled with good time, wedding favours, and shared memories, a sense of calm arrives. The bags maybe fuller, but the journey back home will be smoother and lighter. Because when what you carry supports your journey without interrupting it, travel becomes less about logistics—and more about moving through the world together, exactly as you are.",
       ],
       images: [
         {
@@ -183,16 +198,16 @@ const TimeLineWidget1 = () => {
                 <div className={styles.about_horizontal_info}>
                 <div className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_1}`}>
                   <h2 className={styles.about_timeline_heading}>
-                    Accommodation
+                   Day One: Departures and Long-Haul Ease
                   </h2>
                   {/* <div className={styles.yearago}>{item.subtitle}</div> */}
                 </div>
-                  <div className={styles.u_hide_tablet}></div>
+                  {/* <div className={styles.u_hide_tablet}></div> */}
                   <div className={styles.about_horizontal_text}>
                     <h3
                       className={`${styles.u_text_style_h4} ${styles.u_mb_5}`}
                     >
-                      Villas
+                      {/* Villas */}
                     </h3>
                     <ul role="list" className={styles.about_list}>
                       {/* {item.highlights.map((text, idx) => (
@@ -200,16 +215,15 @@ const TimeLineWidget1 = () => {
                           {text}
                         </li> */}
                       <li className={styles.about_list_item}>
-                        Spread across three spacious buildings, the villa
-                        includes two en-suite bedrooms — one king-size and one
-                        twin.
+                      Long-haul travel are a tempo onto itself, and the incorrect suitcase can throw that 
+rhythm right off. It starts when you check in with the TUMI 19 Degree Lite Extended Trip 
+Packing Case moving smoothly with you. Don’t be fooled by its lightweight structure 
+because it packs quite the punch with its sturdy exterior, which looks sophisticated, 
+thanks to its subtle sheen. There’s always room for last-minute additions and 
+indulgences that are part and parcel of the experience when you’re travelling with your 
+partner.
                       </li>
-                      <li className={styles.about_list_item}>
-                        The third building features a lounge and dining area.
-                        Outside, enjoy a private pool and an exclusive dining
-                        pavilion.
-                      </li>
-                      {/* ))} */}
+                      
                     </ul>
                   </div>
                 </div>
@@ -221,16 +235,14 @@ const TimeLineWidget1 = () => {
                         className={styles.about_horizontal_image_wrapper}
                       >
                         <img
-                          src="
-                          https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/accommodation_rajvilas/kohinoor-villa-with-private-pool/ks_revised/820x646/kohinoor_suite_pool_area.jpg?w=724&hash=1a4968a78bc9df5c845ec4e75be5b46d"
+                          src="/Assets/timeline_widget_1_images/154168_1918_hi-res_alt1_2_1.webp"
                           alt={img.alt}
                           className={styles.about_horizontal_image}
                         />
                         <div className={styles.u_text_style_small}>
-                          <em>
-                            Every detail has been considered in this exceptional
-                            accommodation.
-                          </em>
+                          {/* <em>
+                           Varun Dhawan and Alia Bhatt in <i>Badrinath Ki Dulhania</i>
+                          </em> */}
                         </div>
                       </div>
                       <div className={styles.about_horizontal_image_column}>
@@ -238,7 +250,7 @@ const TimeLineWidget1 = () => {
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/accommodation_rajvilas/kohinoor-villa-with-private-pool/ks_revised/820x646/kohinoor_suite_living_room.jpg?w=310&hash=9bbd11afb733ef456bf83f155e0d675d"
+                            src="/Assets/timeline_widget_1_images/154200_4482_square_1_2.webp"
                             loading="lazy"
                             width="390"
                             height="260"
@@ -246,16 +258,16 @@ const TimeLineWidget1 = () => {
                             className={styles.about_horizontal_image}
                           />
                           <div className={styles.u_text_style_small}>
-                            <em>
-                              Includes a master bedroom, an en-suite bathroom,
-                            </em>
+                            {/* <em>
+                           Varun Dhawan and Alia Bhatt in <i>Badrinath Ki Dulhania</i>
+                          </em> */}
                           </div>
                         </div>
                         <div
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/accommodation_rajvilas/kohinoor-villa-with-private-pool/ks_revised/820x646/kohinoor_suite_dining_area_.jpg?w=310&hash=32a028e2fffe8236b6ec710f668a712c"
+                            src="/Assets/timeline_widget_1_images/154200_A752_hi-res_main_1_3.webp"
                             loading="lazy"
                             width="390"
                             height="260"
@@ -263,7 +275,9 @@ const TimeLineWidget1 = () => {
                             className={styles.about_horizontal_image}
                           />
                           <div className={styles.u_text_style_small}>
-                            <em>Temperature-controlled swimming poo</em>
+                            {/* <em>
+                           Varun Dhawan and Alia Bhatt in <i>Badrinath Ki Dulhania</i>
+                          </em> */}
                           </div>
                         </div>
                       </div>
@@ -295,7 +309,7 @@ const TimeLineWidget1 = () => {
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>Dining</h2>
+                    <h2 className={styles.about_timeline_heading}>Day Two: Arrival and Settling In</h2>
                     {/* <div className={styles.yearago}>
                      
                       CENTURY
@@ -305,7 +319,7 @@ const TimeLineWidget1 = () => {
                     <h3
                       className={`${styles.u_text_style_h4} ${styles.u_mb_5}`}
                     >
-                      {item.title}
+                      {/* {item.title} */}
                     </h3>
                     <ul role="list" className={styles.about_list}>
                       {item.highlights.map((text, idx) => (
@@ -324,15 +338,14 @@ const TimeLineWidget1 = () => {
                         className={styles.about_horizontal_image_wrapper}
                       >
                         <img
-                          src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/Rajvilas/Dining/suryamahal/desktop820x646/21.jpg"
+                          src="/Assets/timeline_widget_1_images/156490_1041_hi-res_main_1_4.webp"
                           alt={img.alt}
                           className={styles.about_horizontal_image}
                         />
                         <div className={styles.u_text_style_small}>
-                          <em>
-                            The Sun Palace is our all day fine dining restaurant
-                            in Jaipur.{" "}
-                          </em>
+                          {/* <em>
+                           Ranveer Singh and Alia Bhatt in <i>Rocky Aur Rani Kii Prem Kahaani</i>
+                          </em> */}
                         </div>
                       </div>
                       <div className={styles.about_horizontal_image_column}>
@@ -340,15 +353,15 @@ const TimeLineWidget1 = () => {
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/Rajvilas/Dining/Rajmahal/desktop820x646/rajmahal.jpg"
+                            src="/Assets/timeline_widget_1_images/156561_T522_hi-res_main_1_5.webp"
                             loading="lazy"
                             alt=""
                             className={styles.about_horizontal_image}
                           />
                           <div className={styles.u_text_style_small}>
-                            <em>
-                              Raj Mahal is our speciality Indian restaurant.
-                            </em>
+                             {/* <em>
+                           Ranveer Singh and Alia Bhatt in <i>Rocky Aur Rani Kii Prem Kahaani</i>
+                          </em> */}
                           </div>
                         </div>
                       </div>
@@ -380,14 +393,14 @@ const TimeLineWidget1 = () => {
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>Wellness</h2>
+                    <h2 className={styles.about_timeline_heading}>Day Three: Wedding Celebrations Begin</h2>
                     {/* <div className={styles.yearago}>CENTURY</div> */}
                   </div>
                   <div className={styles.about_horizontal_text}>
                     <h3
                       className={`${styles.u_text_style_h4} ${styles.u_mb_5}`}
                     >
-                      The Oberoi Spa
+                      {/* The Oberoi Spa */}
                     </h3>
                     <ul role="list" className={styles.about_list}>
                       {item.highlights.map((text, idx) => (
@@ -406,12 +419,12 @@ const TimeLineWidget1 = () => {
                         className={styles.about_horizontal_image_wrap_big}
                       >
                         <img
-                          src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/wellness/spa_therapies/desktop820x646/oberoi_exp.jpg"
+                          src="/Assets/timeline_widget_1_images/250410_13_44_FW25Seasonal_TALENT_VoyageurTylrCrssbdy_Mink_186_v3_RGB_300dpi.webp"
                           alt={img.alt}
                           className={styles.about_horizontal_image}
                         />
                         <div className={styles.u_text_style_small}>
-                          <em>The Oberoi Spa in Jaipur offers Eastern,</em>
+                          {/* <em>Shah Rukh Khan and Alia Bhatt in <i>Dear Zindagi</i></em> */}
                         </div>
                       </div>
                       <div className={styles.about_horizontal_image_column}>
@@ -419,14 +432,14 @@ const TimeLineWidget1 = () => {
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/wellness/spa_therapies/desktop820x646/massage.jpg"
+                            src="/Assets/timeline_widget_1_images/gettyimages-1149812845-2048x2048_9.webp"
                             loading="lazy"
                             alt=""
                             className={styles.about_horizontal_image}
                             sizes="(max-width: 479px) 100vw, 418px"
                           />
                           <div className={styles.u_text_style_small}>
-                            <em>Located in a carefully restored haveli,</em>
+                             {/* <em>Shah Rukh Khan and Alia Bhatt in <i>Dear Zindagi</i></em> */}
                           </div>
                         </div>
                       </div>
@@ -458,14 +471,14 @@ const TimeLineWidget1 = () => {
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>Events</h2>
+                    <h2 className={styles.about_timeline_heading}>Day Four: Between Events and Memories of a Lifetime</h2>
                     {/* <div className={styles.yearago}>CENTURY</div> */}
                   </div>
                   <div className={styles.about_horizontal_text}>
                     <h3
                       className={`${styles.u_text_style_h4} ${styles.u_mb_5}`}
                     >
-                      Events
+                      {/* Events */}
                     </h3>
                     <ul role="list" className={styles.about_list}>
                       {item.highlights.map((text, idx) => (
@@ -485,33 +498,32 @@ const TimeLineWidget1 = () => {
                           className={styles.about_horizontal_image_wrapper}
                         >
                           <img
-                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/rajvilas-new/Event/event/desktop_overview_1260x600/conference_hall.jpg"
+                            src="/Assets/timeline_widget_1_images/gettyimages-529959105-2048x2048_8.webp"
                             alt={img.alt}
                             //   width="390"
                             //     height="475"
                             className={styles.about_horizontal_image}
                           />
                           <div className={styles.u_text_style_small}>
-                            <em>
-                              Chandravanshi. Furnished with a grand table that
-                              can seat up to 22 people. 
-                            </em>
+                            {/* <em>
+                              Vicky Kaushal and Alia Bhatt in <i>Raazi</i> 
+                            </em> */}
                           </div>
                         </div>
                         <div
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/rajvilas-new/Event/event/desktop_overview_1260x600/conference_hall.jpg"
+                            src="/Assets/timeline_widget_1_images/gettyimages-85666215-2048x2048_7.webp"
                             loading="lazy"
                             alt=""
                             className={styles.about_horizontal_image}
                             sizes="(max-width: 479px) 100vw, 418px"
                           />
                           <div className={styles.u_text_style_small}>
-                            <em>
-                              Host a professional event or a meeting at The Oberoi Rajvilas, Jaipur.
-                            </em>
+                            {/* <em>
+                              Vicky Kaushal and Alia Bhatt in <i>Raazi</i> 
+                            </em> */}
                           </div>
                         </div>
                       </div>
@@ -520,12 +532,90 @@ const TimeLineWidget1 = () => {
                         className={styles.about_horizontal_artwork_wrapper}
                       >
                         <img
-                          src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/rajvilas-new/Event/event/desktop_overview_1260x600/board_room.jpg"
+                          src="/Assets/timeline_widget_1_images/gettyimages-sb10069796g-001-2048x2048_10.webp"
+                          alt={img.alt}
+                          className={styles.about_horizontal_image}
+                        />
+                        {/* <em>
+                              Vicky Kaushal and Alia Bhatt in <i>Raazi</i> 
+                            </em> */}
+                      </div>
+                    </>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className={styles.about_progress_wrapper}>
+              <div className={styles.about_progress_line} />
+            </div>
+          </section>
+        ))}
+        {timelineData5.map((item, index) => (
+          <section
+            key={index}
+            className={`${styles.section_about_horizontal} ${
+              index === 0 ? `${styles.is_2}` : ""
+            }`}
+          >
+            <div className={styles.about_horizontal_container}>
+              <div className={styles.about_horizontal_slide}>
+                  <div className={styles.about_horizontal_progress}>
+                    <div className={styles.about_progress_circle_wrapper}>
+                      <div className={styles.about_progress_circle} />
+                    </div>
+                  </div>
+                <div className={styles.about_horizontal_info}>
+                  <div
+                    className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
+                  >
+                    <h2 className={styles.about_timeline_heading}>Day Five: Post-Wedding Travel and Return to Base</h2>
+                    {/* <div className={styles.yearago}>CENTURY</div> */}
+                  </div>
+                  <div className={styles.about_horizontal_text}>
+                    <h3
+                      className={`${styles.u_text_style_h4} ${styles.u_mb_5}`}
+                    >
+                      {/* The Oberoi Spa */}
+                    </h3>
+                    <ul role="list" className={styles.about_list}>
+                      {item.highlights.map((text, idx) => (
+                        <li key={idx} className={styles.about_list_item}>
+                          {text}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className={styles.about_gallery_wrapper}>
+                  {item.images.map((img, idx) => (
+                    <>
+                      <div
+                        key={idx}
+                        className={styles.about_horizontal_image_wrap_big}
+                      >
+                        <img
+                          src="/Assets/timeline_widget_1_images/156561_T522_hi-res_main_1_5.webp"
                           alt={img.alt}
                           className={styles.about_horizontal_image}
                         />
                         <div className={styles.u_text_style_small}>
-                          <em>Host a professional event or a meeting at The Oberoi Rajvilas, Jaipur.</em>
+                          {/* <em>Shah Rukh Khan and Alia Bhatt in <i>Dear Zindagi</i></em> */}
+                        </div>
+                      </div>
+                      <div className={styles.about_horizontal_image_column}>
+                        <div
+                          className={styles.about_horizontal_artwork_wrapper}
+                        >
+                          <img
+                            src="/Assets/timeline_widget_1_images/154200_A752_hi-res_main_1_3.webp"
+                            loading="lazy"
+                            alt=""
+                            className={styles.about_horizontal_image}
+                            sizes="(max-width: 479px) 100vw, 418px"
+                          />
+                          <div className={styles.u_text_style_small}>
+                             {/* <em>Shah Rukh Khan and Alia Bhatt in <i>Dear Zindagi</i></em> */}
+                          </div>
                         </div>
                       </div>
                     </>
