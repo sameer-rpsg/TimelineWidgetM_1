@@ -176,7 +176,7 @@
   inset: 0%;
 }
 .about_progress_wrapper.is_first {
-  padding-left: 46vw;
+  /* padding-left: 46vw; */
 }
 .about_progress_line {
   opacity: 0.2;

@@ -96,92 +96,79 @@ const TimeLineWidget1 = () => {
       ],
     },
   ];
-  useEffect(() => {
-    const mm = gsap.matchMedia();
+ useEffect(() => {
+  const mm = gsap.matchMedia();
 
-    mm.add("(min-width: 992px)", () => {
-      const container = document.querySelector(`.${styles.horizontal}`);
-      const wrapper = container?.querySelector(`.${styles.horizontal_wrapper}`);
-      const listItems = container?.querySelectorAll(
-        `.${styles.about_list_item}`
-      );
+  mm.add("(min-width: 992px)", () => {
+    const container = document.querySelector(`.${styles.horizontal}`);
+    const wrapper = container?.querySelector(`.${styles.horizontal_wrapper}`);
+    const listItems = container?.querySelectorAll(
+      `.${styles.about_list_item}`
+    );
 
-      if (container && wrapper && listItems.length) {
-        const horizontalScrollTimeline = gsap
-          .timeline({
-            defaults: { ease: "none" },
-            scrollTrigger: {
-              trigger: container,
-              start: "top top",
-              end: () => "+=" + (wrapper.scrollWidth - window.innerWidth),
-              pin: true,
-              scrub: 1,
-              invalidateOnRefresh: true,
-            },
-          })
-          .to(wrapper, {
-            x: () => -(wrapper.scrollWidth - window.innerWidth),
-            ease: "none",
-          });
+    if (!container || !wrapper || !listItems.length) return;
 
-        listItems.forEach((item) => {
-          const split = new SplitText(item, {
-            //   type: "lines",
-            // linesClass: "single_line",
-            // mask: "lines",
-             type: "lines",
-  linesClass: styles.single_line,
-  mask: "lines",
-          });
-
-          gsap.from(split.lines, {
-            yPercent: 100,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.1,
-            whiteSpace:"nowrap",
-            scrollTrigger: {
-              trigger: item,
-              containerAnimation: horizontalScrollTimeline,
-              start: "left 80%",
-              once: true,
-            },
-          });
-        });
-      }
-      ScrollTrigger.refresh();
+    // 🔹 Horizontal scroll timeline
+    const horizontalScrollTimeline = gsap.timeline({
+      defaults: { ease: "none" },
+      scrollTrigger: {
+        trigger: container,
+        start: "top top",
+        end: () => "+=" + (wrapper.scrollWidth - window.innerWidth),
+        pin: true,
+        scrub: 1,
+        invalidateOnRefresh: true,
+      },
     });
 
-    mm.add("(max-width: 991px)", () => {
-      const listItems = document.querySelectorAll(`.${styles.about_list_item}`);
+    horizontalScrollTimeline.to(wrapper, {
+      x: () => -(wrapper.scrollWidth - window.innerWidth),
+    });
 
-      listItems.forEach((item) => {
-        const split = new SplitText(item, {
-          type: "lines",
-          mask: "lines",
-          linesClass: `${styles.single_line}`,
-        });
-
-        gsap.from(split.lines, {
-          yPercent: 100,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.1,
-          scrollTrigger: {
-            trigger: item,
-            start: "top 90%",
-            once: true,
-          },
-        });
+    // 🔹 Animate full paragraph (NO SplitText)
+    listItems.forEach((item) => {
+      gsap.from(item, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,
+          containerAnimation: horizontalScrollTimeline,
+          start: "left 80%",
+          once: true,
+        },
       });
     });
 
-    // Cleanup SplitText instances on unmount
-    return () => {
-      SplitText.revert();
-      mm.revert();
-    };
-  }, []);
+    ScrollTrigger.refresh();
+  });
+
+  mm.add("(max-width: 991px)", () => {
+    const listItems = document.querySelectorAll(
+      `.${styles.about_list_item}`
+    );
+
+    listItems.forEach((item) => {
+      gsap.from(item, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+          once: true,
+        },
+      });
+    });
+  });
+
+  return () => {
+    mm.revert();
+    ScrollTrigger.kill();
+  };
+}, []);
 
   return (
     <div className={`${styles.horizontal} ${styles.is_about}`}>
