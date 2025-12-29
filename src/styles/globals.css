@@ -3347,11 +3347,11 @@ span.author {
     color: #000;
 }
 .detailed-media_info {
-    display: flex
-;
+    display: flex;
     flex-direction: column;
     gap: 32px;
     font-family: var(--primary-font-scotch-display-compress);
+    margin: 5px 0;
 }
 .card-meta_meta {
     display: flex
@@ -3708,6 +3708,9 @@ ul li {
         font-size: 2.5rem;
         line-height: 1.2;
     }
+    .detailed-media_info{
+       margin: 0;
+    }
     .card-meta_meta {
         flex-direction: column;
     }
@@ -3782,6 +3785,7 @@ ul li {
     .detailed-media_info {
         align-items: center;
         padding-left: 0;
+
     }
     .big-container-blog {
         padding: 0;

@@ -127,8 +127,11 @@ const TimeLineWidget1 = () => {
         listItems.forEach((item) => {
           const split = new SplitText(item, {
             //   type: "lines",
-            linesClass: "single_line",
-            mask: "lines",
+            // linesClass: "single_line",
+            // mask: "lines",
+             type: "lines",
+  linesClass: styles.single_line,
+  mask: "lines",
           });
 
           gsap.from(split.lines, {
@@ -145,6 +148,7 @@ const TimeLineWidget1 = () => {
           });
         });
       }
+      ScrollTrigger.refresh();
     });
 
     mm.add("(max-width: 991px)", () => {
@@ -198,7 +202,9 @@ const TimeLineWidget1 = () => {
                 <div className={styles.about_horizontal_info}>
                 <div className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_1}`}>
                   <h2 className={styles.about_timeline_heading}>
-                   Day One: Departures and Long-Haul Ease
+                   Day 01: <br /> <span style={{fontSize:"1.25rem"}}> 
+                     Departures and Long-Haul Ease
+                    </span>
                   </h2>
                   {/* <div className={styles.yearago}>{item.subtitle}</div> */}
                 </div>
@@ -309,7 +315,10 @@ partner.
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>Day Two: Arrival and Settling In</h2>
+                    <h2 className={styles.about_timeline_heading}>Day 02: <br /> <span style={{fontSize:"1.25rem"}}>
+                      Arrival and Settling In
+                      </span>
+                      </h2>
                     {/* <div className={styles.yearago}>
                      
                       CENTURY
@@ -393,7 +402,10 @@ partner.
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>Day Three: Wedding Celebrations Begin</h2>
+                    <h2 className={styles.about_timeline_heading}>Day 03: <br /> <span style={{fontSize:"1.25rem"}}>
+                      Wedding Celebrations Begin
+                      </span> 
+                      </h2>
                     {/* <div className={styles.yearago}>CENTURY</div> */}
                   </div>
                   <div className={styles.about_horizontal_text}>
@@ -471,7 +483,10 @@ partner.
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>Day Four: Between Events and Memories of a Lifetime</h2>
+                    <h2 className={styles.about_timeline_heading}>Day 04: <br /> <span style={{fontSize:"1.25rem"}}>
+                       Between Events and Memories of a Lifetime
+                      </span>
+                       </h2>
                     {/* <div className={styles.yearago}>CENTURY</div> */}
                   </div>
                   <div className={styles.about_horizontal_text}>
@@ -568,7 +583,10 @@ partner.
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>Day Five: Post-Wedding Travel and Return to Base</h2>
+                    <h2 className={styles.about_timeline_heading}>Day 05: <br /> <span style={{fontSize:"1.25rem"}}>
+                      Post-Wedding Travel and Return to Base
+                      </span> 
+                      </h2>
                     {/* <div className={styles.yearago}>CENTURY</div> */}
                   </div>
                   <div className={styles.about_horizontal_text}>

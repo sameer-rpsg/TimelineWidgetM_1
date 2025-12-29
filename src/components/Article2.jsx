@@ -44,7 +44,7 @@ const Article2 = () => {
                       </div>
                       <div className="card-meta_item">
                         <span className="card-meta_label text-7">
-                          By {/* */}(Author Name)
+                          By {/* */}(Team Manifest)
                         </span>
                       </div>
                     </div>

@@ -112,7 +112,8 @@
 }
 .about_list_item {
   margin-bottom: 1.5rem;
-  list-style: square !important;
+  /* list-style: square !important; */
+  list-style: none;
 }
 .single_mask_line_mask {
   padding-bottom: 0.15em;
@@ -185,8 +186,10 @@
   height: 1px;
 }
 .section_about_horizontal.is_2 {
-  padding-left: 20vw;
-  padding-right: 20vw;
+  /* padding-left: 20vw;
+  padding-right: 20vw; */
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 .about_timeline_heading_wrapper.is_section_2 {
   transform: translate(-3%);
