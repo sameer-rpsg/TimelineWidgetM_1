@@ -139,6 +139,7 @@ const TimeLineWidget1 = () => {
             opacity: 0,
             duration: 1,
             stagger: 0.1,
+            whiteSpace:"nowrap",
             scrollTrigger: {
               trigger: item,
               containerAnimation: horizontalScrollTimeline,
