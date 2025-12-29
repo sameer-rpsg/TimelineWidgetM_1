@@ -99,34 +99,78 @@ const TimeLineWidget1 = () => {
  useEffect(() => {
   const mm = gsap.matchMedia();
 
-  mm.add("(min-width: 992px)", () => {
-    const container = document.querySelector(`.${styles.horizontal}`);
-    const wrapper = container?.querySelector(`.${styles.horizontal_wrapper}`);
-    const listItems = container?.querySelectorAll(
+ mm.add("(min-width: 992px)", () => {
+  const container = document.querySelector(`.${styles.horizontal}`);
+  const wrapper = container?.querySelector(`.${styles.horizontal_wrapper}`);
+  const sections = container?.querySelectorAll(
+    `.${styles.section_about_horizontal}`
+  );
+
+  if (!container || !wrapper || !sections.length) return;
+
+  // 🔹 Horizontal scroll master timeline
+  const horizontalScrollTimeline = gsap.timeline({
+    defaults: { ease: "none" },
+    scrollTrigger: {
+      trigger: container,
+      start: "top top",
+      end: () => "+=" + (wrapper.scrollWidth - window.innerWidth),
+      pin: true,
+      scrub: 1,
+      invalidateOnRefresh: true,
+    },
+  });
+
+  horizontalScrollTimeline.to(wrapper, {
+    x: () => -(wrapper.scrollWidth - window.innerWidth),
+  });
+
+  // 🔹 Per-section animations
+  sections.forEach((section) => {
+    const listItems = section.querySelectorAll(
       `.${styles.about_list_item}`
     );
+    const listItemsImg = section.querySelectorAll(
+      `.${styles.about_horizontal_image}`
+    );
+    const listItemsHeading = section.querySelectorAll(
+      `.${styles.about_timeline_heading}`
+    );
+    const progressLine = section.querySelector(
+      `.${styles.about_progress_line}`
+    );
 
-    if (!container || !wrapper || !listItems.length) return;
-
-    // 🔹 Horizontal scroll timeline
-    const horizontalScrollTimeline = gsap.timeline({
-      defaults: { ease: "none" },
-      scrollTrigger: {
-        trigger: container,
-        start: "top top",
-        end: () => "+=" + (wrapper.scrollWidth - window.innerWidth),
-        pin: true,
-        scrub: 1,
-        invalidateOnRefresh: true,
-      },
-    });
-
-    horizontalScrollTimeline.to(wrapper, {
-      x: () => -(wrapper.scrollWidth - window.innerWidth),
-    });
-
-    // 🔹 Animate full paragraph (NO SplitText)
+    /* TEXT ANIMATION */
     listItems.forEach((item) => {
+      gsap.from(item, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        delay:0.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,
+          containerAnimation: horizontalScrollTimeline,
+          start: "left 80%",
+          once: true,
+        },
+      });
+    });
+    listItemsImg.forEach((item) => {
+      gsap.from(item, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,
+          containerAnimation: horizontalScrollTimeline,
+          start: "left 80%",
+          once: true,
+        },
+      });
+    });
+    listItemsHeading.forEach((item) => {
       gsap.from(item, {
         y: 100,
         opacity: 0,
@@ -141,13 +185,51 @@ const TimeLineWidget1 = () => {
       });
     });
 
-    ScrollTrigger.refresh();
+    /* 🔥 PROGRESS BAR ANIMATION */
+    if (progressLine) {
+      gsap.to(progressLine, {
+        // scaleX: 1,
+        width:"100%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          containerAnimation: horizontalScrollTimeline,
+          start: "left center",
+          end: "right center",
+          scrub: true,
+        },
+      });
+    }
   });
+
+  ScrollTrigger.refresh();
+});
+
 
   mm.add("(max-width: 991px)", () => {
     const listItems = document.querySelectorAll(
       `.${styles.about_list_item}`
     );
+     const listItemsImg = document.querySelectorAll(
+      `.${styles.about_horizontal_image}`
+    );
+    const listItemsHeading = document.querySelectorAll(
+      `.${styles.about_timeline_heading}`
+    );
+    listItemsImg.forEach((item) => {
+      gsap.from(item, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,
+          // containerAnimation: horizontalScrollTimeline,
+          start: "left 80%",
+          once: true,
+        },
+      });
+    });
 
     listItems.forEach((item) => {
       gsap.from(item, {
@@ -162,6 +244,21 @@ const TimeLineWidget1 = () => {
         },
       });
     });
+    listItemsHeading.forEach((item) => {
+      gsap.from(item, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: item,
+          // containerAnimation: horizontalScrollTimeline,
+          start: "left 80%",
+          once: true,
+        },
+      });
+    });
+    
   });
 
   return () => {
