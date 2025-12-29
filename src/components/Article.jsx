@@ -9,13 +9,7 @@ const Article = () => {
       <div className="story-container" style={{ position: "relative" }}>
         <div className="Stories_wrapper" style={{ padding: "4rem 0 0 0" }}>
           <div className="container">
-            <div className="ad-flex-all">
-              <div
-                id="div-gpt-ad-stories-mobile-top-6880eed48bdc60a45473bec7}"
-                data-cy="Ad"
-                className="ad-text"
-              />
-            </div>
+         
             <div className="story-top">
               <div className="breadcrumb">
                 <p style={{ fontWeight: 300 }}>
@@ -75,14 +69,7 @@ const Article = () => {
               </div>
             </div>
             <div className="Stories_wrapper_inner">
-              <div className="ad-flex-all">
-                <div
-                  id="div-gpt-ad-stories-top-6880eed48bdc60a45473bec7"
-                  data-cy="Ad"
-                  className="ad-text"
-                  style={{ margin: "30px auto" }}
-                />
-              </div>
+             
               <div className="big-container-blog">
                 <div className="blog-img-container gradient_remove_bg">
                   <img
@@ -528,14 +515,7 @@ attention yet earning your trust at every step.
                     </div>
                   </div>
                   <div className="StoriesInfo_left_innercntr-full-width">
-                    <div className="ad-flex-all">
-                      <div
-                        id="div-gpt-ad-stories-middle-26"
-                        data-cy="Ad"
-                        className="ad-text"
-                        style={{ margin: "30px auto" }}
-                      />
-                    </div>
+                    
                   </div>
                   <div className="StoriesInfo_left_innercntr-full-width">
                     <div className="">
@@ -669,25 +649,11 @@ attention yet earning your trust at every step.
                 </div>
                 <div className="StoriesInfo_rightcntr ">
                   <div className="article-sidebar sticky-post">
-                    <div className="ad-flex-all">
-                      <div
-                        id="div-gpt-ad-stories-rhs"
-                        data-cy="Ad"
-                        className="ad-text"
-                        style={{ margin: "0px auto" }}
-                      />
-                    </div>
+                    
                   </div>
                 </div>
               </div>
-              <div className="ad-flex-all">
-                <div
-                  id="div-gpt-ad-stories-bottom-6880eed48bdc60a45473bec7"
-                  data-cy="Ad"
-                  className="ad-text"
-                  style={{ margin: "50px auto 0px" }}
-                />
-              </div>
+             
               <div
                 className="nextStoryContainer container"
                 style={{ backgroundColor: "rgb(250, 247, 243)" }}

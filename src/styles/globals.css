@@ -3409,8 +3409,7 @@ span.author {
 .rounded_btns {
     position: relative;
     z-index: 0;
-    display: inline-flex
-;
+    display: inline-flex;
     height: 35px;
     padding: 0 15px;
     flex-shrink: 0;
@@ -3426,6 +3425,7 @@ span.author {
     transition: border-color .4s ease;
     cursor: pointer;
     overflow: hidden;
+    background-color: transparent;
 }
 .rounded_btns:before {
     content: "";
